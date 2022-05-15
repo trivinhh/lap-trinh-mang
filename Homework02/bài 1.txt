@@ -1,0 +1,85 @@
+#include <winsock2.h>
+#include <stdio.h>
+#pragma comment(lib, "ws2_32")
+
+int numClient = 0;
+SOCKET clients[64];
+char buf[256];
+
+DWORD WINAPI ClThr(LPVOID args)
+{
+    int numm;
+    char* Texx;
+
+    SOCKET client = *(SOCKET*)args;
+   
+    do {
+        char* pop = (char*) "\nFormat 'cl_num: xxx': ";
+        send(client, pop, strlen(pop), 0);
+
+        numm = recv(client, buf, sizeof(buf), 0);
+        if (numm <= 0)
+            break;
+        buf[numm] = 0;
+
+        char cmd[256];
+        int cl_num;
+        sscanf_s(buf, "%s %d", cmd, sizeof(cmd), &cl_num);
+
+        if (strcmp(cmd, "cl_num:") != 0) Texx = (char*)"Please input with format 'cl_num: xxxxxx' !\n";
+        
+        else if (cl_num != client) Texx = (char*)"Sign in fail! !";
+        else {
+            Texx = (char*)"Sign in successfull!\n";
+            clients[numClient] = client;
+            numClient++;
+        }
+
+        send(client, Texx, strlen(Texx), 0);
+
+    } while (strcmp(Texx, "Sign in successfull!\n") != 0);
+
+    
+    while (1)
+    {
+        numm = recv(client, buf, sizeof(buf), 0);
+        if (numm <= 0)
+            break;
+        buf[numm] = 0;
+        printf("%d: %s\n", client, buf);
+
+        for (int i = 0; i < numClient; i++)
+        {
+            if (clients[i] == client) continue;
+            char data[1024];
+            snprintf(data, 10, "%d: ", client);
+            strcat_s(data, buf);
+            send(clients[i], data, strlen(data), 0);
+        }
+    }
+    closesocket(client);
+}
+
+int main()
+{
+    WSADATA wsa;
+    WSAStartup(MAKEWORD(2, 2), &wsa);
+
+    SOCKET listener = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+
+    SOCKADDR_IN addr;
+    addr.sin_family = AF_INET;
+    addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    addr.sin_port = htons(8000);
+
+    bind(listener, (SOCKADDR*)&addr, sizeof(addr));
+
+    listen(listener, 5);
+
+    while (1)
+    {
+        SOCKET client = accept(listener, NULL, NULL);
+        printf("Client connect: %d\n", client);
+        CreateThread(0, 0, ClThr, &client, 0, 0);
+    }
+}

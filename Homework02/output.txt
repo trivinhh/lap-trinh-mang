@@ -1,0 +1,49 @@
+ Volume in drive C is OS 
+ Volume Serial Number is 3233-AD62
+
+ Directory of C:\Users\nqt01
+ 
+05/12/2022  09:16 AM    <DIR>          .                                                                                
+03/29/2022  03:49 PM    <DIR>          ..                                                                               
+03/26/2022  12:57 PM             6,875 -1.14-windows.xml                                                                
+04/03/2022  09:48 AM    <DIR>          .android                                                                         
+04/23/2022  05:54 PM           326,268 .babel.json                                                                      
+03/31/2022  11:19 AM    <DIR>          .cache                                                                           
+04/02/2022  03:36 PM    <DIR>          .config                                                                          
+05/15/2022  12:07 PM    <DIR>          .dotnet                                                                          
+03/31/2022  11:19 AM    <DIR>          .eclipse                                                                         
+03/29/2022  05:49 PM               455 .gitconfig                                                                       
+04/07/2022  05:26 PM    <DIR>          .lemminx                                                                         
+04/27/2022  03:05 AM    <DIR>          .librarymanager                                                                  
+04/02/2022  04:16 PM    <DIR>          .m2                                                                              
+03/25/2022  09:54 AM    <DIR>          .nbi                                                                             
+04/02/2022  03:10 PM    <DIR>          .node                                                                            
+03/24/2022  04:50 PM    <DIR>          .nuget                                                                           
+05/12/2022  09:21 AM    <DIR>          .p2                                                                              
+03/24/2022  03:13 PM    <DIR>          .templateengine                                                                  
+03/25/2022  08:15 PM    <DIR>          .vscode                                                                          
+04/02/2022  03:10 PM               121 .yarnrc                                                                          
+03/25/2022  01:00 PM         6,527,034 1_Integrated Webcam.mp4                                                          
+03/24/2022  11:29 AM    <DIR>          3D Objects                                                                       
+03/24/2022  12:56 PM    <DIR>          Contacts                                                                         
+05/15/2022  10:17 PM    <DIR>          Desktop                                                                          
+05/05/2022  08:05 PM    <DIR>          Documents                                                                        
+05/15/2022  10:17 PM    <DIR>          Downloads                                                                        
+03/31/2022  10:48 AM    <DIR>          eclipse                                                                          
+04/20/2022  05:19 PM    <DIR>          eclipse-workspace                                                                
+03/24/2022  12:56 PM    <DIR>          Favorites                                                                        
+04/22/2022  10:25 PM    <DIR>          Links                                                                            
+05/03/2022  08:24 PM    <DIR>          Music                                                                            
+04/02/2022  03:23 PM    <DIR>          node_modules                                                                     
+04/15/2022  01:54 PM    <DIR>          OneDrive                                                                         
+04/02/2022  03:23 PM            20,567 package-lock.json                                                                
+04/02/2022  03:23 PM                75 package.json                                                                     
+05/03/2022  08:25 PM    <DIR>          Pictures                                                                         
+03/28/2022  06:50 AM    <DIR>          Postman                                                                          
+03/24/2022  12:56 PM    <DIR>          Saved Games                                                                      
+03/24/2022  12:56 PM    <DIR>          Searches                                                                         
+03/24/2022  03:37 PM    <DIR>          source                                                                           
+03/24/2022  12:22 PM    <DIR>          Tracing                                                                          
+03/28/2022  09:32 AM    <DIR>          Videos                                                                          
+                7 File(s)      6,881,395 bytes                                                                         
+                35 Dir(s)  44,275,613,696 bytes free                                                                                                                         
